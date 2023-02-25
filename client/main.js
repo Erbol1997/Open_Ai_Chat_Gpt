@@ -1,3 +1,6 @@
+import bot from './public/bot.svg';
+import user from './public/user.svg';
+
 const chatItems = document.getElementById('chat-items');
 const submitBtn = document.getElementById('submit');
 const textarea = document.querySelector('textarea');
@@ -13,7 +16,7 @@ function generateUniqueId() {
 
 function userMessageRender(value) {
   return `<div class="user-message">
-            <img src="./public/user.svg" alt="user" />
+            <img src="${user}" alt="user" />
             <div class="user-question">
               ${value}
             </div>
@@ -23,7 +26,7 @@ function userMessageRender(value) {
 
 function botMessageRender(value, uniqueId) {
   return `<div class="bot-message">
-            <img src="./public/bot.svg" alt="bot" />
+            <img src="${bot}" alt="bot" />
             <div class="bot-answer" id=${uniqueId}>
               ${value}
             </div>
