@@ -79,7 +79,7 @@ submitBtn.addEventListener('click', async (e) => {
 
   loader(botMessageContainer);
 
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('https://chat-gpt-8pmm.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
