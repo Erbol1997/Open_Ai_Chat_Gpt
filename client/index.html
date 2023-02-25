@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="favicon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/90114b954f.css"
+      crossorigin="anonymous" />
+    <title>Open AI Chat-GPT</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="sidebar">
+          <h1>
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            Last questions
+          </h1>
+          <div class="last-questions-items">
+            <ul>
+              <li>
+                <i class="fa-regular fa-comment"></i>
+                Last question
+              </li>
+            </ul>
+          </div>
+          <div class="lasr-question-footer">
+            <button>Очистить</button>
+            <a href="mailto:sultanov9712@gmail.com">Задать вопрос</a>
+          </div>
+        </div>
+        <div class="chat-content">
+          <div class="chat-container">
+            <div class="chat-items" id="chat-items"></div>
+            <form>
+              <textarea name="prompt" rows="1" placeholder="Ask codex..."></textarea>
+              <button id="submit" type="submit"><i class="fa-regular fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <script src="https://kit.fontawesome.com/90114b954f.js" crossorigin="anonymous" defer></script>
+  </body>
+</html>
