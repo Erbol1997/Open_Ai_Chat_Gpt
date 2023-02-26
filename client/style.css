@@ -64,6 +64,19 @@ body {
   scroll-behavior: smooth;
 }
 
+.container > i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#close {
+  display: none;
+}
+
 #chat_container::-webkit-scrollbar {
   display: none;
 }
@@ -81,21 +94,20 @@ body {
   height: 100vh;
 }
 
+@media (min-width: 768px) {
+  .container > i {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .sidebar {
     display: none;
+    z-index: 999;
   }
 
   .chat-content {
     padding-left: 10px !important;
-  }
-}
-
-@media (max-width: 1070px) {
-  .chat-container > form > textarea {
-    -webkit-box-shadow: 0px -25px 15px 0px rgba(64, 65, 79, 0.8) !important;
-    -moz-box-shadow: 0px -25px 15px 0px rgba(64, 65, 79, 0.8) !important;
-    box-shadow: 0px -25px 15px 0px rgba(64, 65, 79, 0.8) !important;
   }
 }
 
@@ -122,6 +134,7 @@ body {
 }
 
 .last-questions-items > ul > li {
+  position: relative;
   padding: 12px;
   background-color: #2a2b32;
   border-radius: 6px;
@@ -135,8 +148,23 @@ body {
   background-color: #343541;
 }
 
+.last-questions-items > ul > li:hover #copyBtn {
+  visibility: visible;
+  background-color: transparent;
+}
+
 .last-questions-items > ul > li > i {
   padding-right: 8px;
+}
+
+#copyBtn {
+  position: absolute;
+  left: 210px;
+  top: 5px;
+  padding: 10px;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
 }
 
 .long-text-hidden {
@@ -163,6 +191,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  color: #fff;
 }
 
 .lasr-question-footer > button:hover {
@@ -218,12 +247,38 @@ body {
   align-items: flex-start;
 }
 
+.bot-message {
+  position: relative;
+}
+
+.bot-message:hover i {
+  visibility: visible;
+}
+
+.bot-message > i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 10px;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #202123;
+}
+
 .user-question {
-  white-space: pre-wrap;
+  white-space: pre-line;
+  font-family: system-ui;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .bot-answer {
   white-space: pre-wrap;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .user-message > img {
@@ -262,18 +317,15 @@ body {
 
 .chat-container > form > textarea {
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 6px;
   max-height: 200px;
   resize: none;
   height: 55px;
-  overflow-y: hidden;
-  padding: 12px 37px 12px 16px;
+  padding: 15px 37px 15px 15px;
   background-color: #40414f;
   width: 100%;
-  -webkit-box-shadow: 0px -10px 15px 10px rgba(64, 65, 79, 0.8);
-  -moz-box-shadow: 0px -10px 15px 10px rgba(64, 65, 79, 0.8);
-  box-shadow: 0px -10px 15px 10px rgba(64, 65, 79, 0.8);
+  color: #fff;
 }
 
 .chat-container > form > textarea:focus {
@@ -291,6 +343,10 @@ body {
   font-size: 15px;
   padding: 5px;
   border-radius: 6px;
+}
+
+.chat-container > form > button > i {
+  color: #fff;
 }
 
 .chat-container > form > button:hover {

@@ -14,21 +14,18 @@
   <body>
     <div id="app">
       <div class="container">
-        <div class="sidebar">
+        <i id="open" class="fa-solid fa-bars"></i>
+        <i id="close" class="fa-solid fa-xmark"></i>
+        <div id="sidebar" class="sidebar">
           <h1>
             <i class="fa-solid fa-clock-rotate-left"></i>
-            Last questions
+            Последние вопросы
           </h1>
           <div class="last-questions-items">
-            <ul>
-              <li>
-                <i class="fa-regular fa-comment"></i>
-                Last question
-              </li>
-            </ul>
+            <ul id="last-questions-items"></ul>
           </div>
           <div class="lasr-question-footer">
-            <button>Очистить</button>
+            <button id="last-questions-items-clear">Очистить</button>
             <a href="mailto:sultanov9712@gmail.com">Задать вопрос</a>
           </div>
         </div>
@@ -36,7 +33,7 @@
           <div class="chat-container">
             <div class="chat-items" id="chat-items"></div>
             <form>
-              <textarea name="prompt" rows="1" placeholder="Ask codex..."></textarea>
+              <textarea name="prompt" placeholder="Спросите что-нибудь"></textarea>
               <button id="submit" type="submit"><i class="fa-regular fa-paper-plane"></i></button>
             </form>
           </div>
